@@ -6,7 +6,7 @@ from math import *
 class HoneyBee:
     """
     mode:
-    -2 = Dancing, dacing...
+    -2 = Dancing, dancing...
     -1 = Explorer returning to hive
      0 = Exploring
      1 = Exploiter waiting
@@ -41,12 +41,12 @@ class HoneyBee:
         ## Main definitions
         self.x = x0
         self.y = y0
-        self.bclass = bclass
+        self.bclass = bclass    # explorer or exploiter
         self.mode = mode
         self.spot = []
         
         ## Direct channel to the Hive
-        self.Hive = None
+        self.Hive = None    # what does this mean?
         
         
         ## Keep track of the energy
@@ -54,7 +54,7 @@ class HoneyBee:
         
         
         ## Dyanmical variables
-        self.v = v
+        self.v = v  # bee's velocity
         self.v_explore = v
         self.v_exploit = 1.0
         self.tsigma = tsigma
@@ -141,7 +141,7 @@ class HoneyBee:
     def move(self, scale = 3):
         
         ## Exploring
-        if self.mode == 0 or self.mode == -3:
+        if self.mode == 0 or self.mode == -3:    # what does -3 mean for mode?
             self.updatePos()
 
         ## Found spot, returning home
